@@ -42,7 +42,7 @@
                         if (! empty($subCats)){?>
                         <li class="nav-item dropdown">
                             <?php
-                                echo "<a class='nav-link dropdown-toggle' href='#'id='navbarDropdown3' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>" . $cat['Name'] ."</a>";
+                                echo "<a class='nav-link dropdown-toggle' href='categories.php?catid=" .$cat['Id'] ."&pagename=" .str_replace(" ","-",$cat['Name']) ."'id='navbarDropdown3' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>" . $cat['Name'] ."</a>";
                                 ?>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
                                 <?php
