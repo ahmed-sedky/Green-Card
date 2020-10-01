@@ -1,0 +1,482 @@
+/* start main rulez */
+body{
+    /*background-color: #e9cecc73;*/
+    background-color: #f3f1f1ba;
+}
+.asterisk {
+    position: absolute;
+    right: 33px;
+    top: 0px;
+    color: red;
+    font-size: 30px;
+}
+/* end main rulez */
+
+/*start navbar */
+.navbar{
+    z-index: 9999;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+.navbar-brand span{
+    color: #2ECC71;
+}
+/*end navbar */
+
+/*start login */
+.login{
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:20px;
+    border-radius:25px;
+    border: 3vmin solid hsl(100 100% 60%);
+    border-image-slice: 1;
+    
+    /*  leverage cascade for cross-browser gradients  */
+    border-image-source: linear-gradient(
+    hsl(100 100% 60%),
+    50%,
+    hsl(200 100% 60%)
+    );
+    border-image-source: radial-gradient(
+    hsl(100 100% 60%),
+    75%,
+    hsl(200 100% 60%)
+    );
+    border-image-source: conic-gradient( hsl(346deg 92% 49%), hsl(241deg 92% 49% / 95%), hsl(14deg 88% 44%) );
+    place-content: center;
+    box-sizing: border-box;
+}
+.login h3{
+    margin-bottom: 20px;
+}
+.login .form-control, .login .btn {
+    border-radius:10px;
+    filter: drop-shadow( 0 2px 3px black);
+}
+.login .form-control{
+    margin-bottom: 10px;
+}
+.login .btn{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.big-circle{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index:-1;
+    opacity: 0.6;
+    height:85%
+}
+.mid-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    height: 60%;
+    opacity: 0.6;
+    z-index: -1;
+}
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+}
+/* end login */
+/* start navbar */
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link ,.dropdown-item:hover ,.nav-link:hover{
+    background-color: #00a8ff;
+    color: white;
+    border-radius: 5px;
+}
+.dropdown-item{
+    -moz-transition: 1s all ease ;
+    -ms-transition: 1s all ease ;
+    -o-transition: 1s all ease ;
+    -webkit-transition: 1s all ease ;
+    transition: 1s all ease ;
+
+}
+.dropdown-item:hover{
+    padding-left:16px;
+}
+.dropdown-menu{    
+    border-top:4px solid #00a8ff;
+    border-radius: 5px;
+    filter: drop-shadow( 0 2px 4px  black);
+}
+/* end navbar */
+
+/* Start Dashboard */
+    .home-stats .stat{
+        font-weight: 400;
+        margin-top:20px;
+        background-color: #FFF;
+        padding:12px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: 2.5vmin solid hsl(100 100% 60%);
+        border-image-slice: 1;
+        
+        /*  leverage cascade for cross-browser gradients  */
+        border-image-source: linear-gradient(
+        hsl(100 100% 60%),
+        50%,
+        hsl(200 100% 60%)
+        );
+        border-image-source: radial-gradient(
+        hsl(100 100% 60%),
+        75%,
+        hsl(200 100% 60%)
+        );
+        border-image-source: conic-gradient( hsl(346deg 92% 49%), hsl(241deg 92% 49% / 95%), hsl(14deg 88% 44%) );
+    }
+    /*
+    .home-stats .pending{
+        border: 2.5vmin solid hsl(100 100% 60%);
+        border-image-slice: 1;
+        border-image-source: linear-gradient( hsl(100 100% 60%), 50%, hsl(200 100% 60%) );
+        border-image-source: radial-gradient( hsl(100 100% 60%), 75%, hsl(200 100% 60%) );
+        border-image-source: conic-gradient( hsl(144deg 24% 55%), hsl(241deg 92% 49% / 95%), hsl(72deg 88% 44%) );
+    }
+    .home-stats .items{
+        border: 2.5vmin solid hsl(100 100% 60%);
+        border-image-slice: 1;
+        border-image-source: linear-gradient( hsl(100 100% 60%), 50%, hsl(200 100% 60%) );
+        border-image-source: radial-gradient( hsl(100 100% 60%), 75%, hsl(200 100% 60%) );
+        border-image-source: conic-gradient( hsl(0deg 95% 49%), hsl(33deg 92% 49% / 95%), hsl(17deg 82% 49%) );
+    }
+    .home-stats .comments{
+        border: 2.5vmin solid hsl(100 100% 60%);
+        border-image-slice: 1;
+        border-image-source: linear-gradient( hsl(100 100% 60%), 50%, hsl(200 100% 60%) );
+        border-image-source: radial-gradient( hsl(100 100% 60%), 75%, hsl(200 100% 60%) );
+        border-image-source: conic-gradient( hsl(280deg 42% 41%), hsl(241deg 92% 49% / 95%), hsl(330deg 88% 44%) );
+    }
+    */
+    .stat span{
+        font-size: 50px;
+        display: block;
+    }
+    .stat span a:hover{
+        text-decoration: none;
+    }
+    .latest{
+        margin-top:40px;
+    }
+    .panel-default{
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px #ccc;
+        margin-bottom: 40px;
+    }
+    .panel-heading{
+        padding: 10px 0 0 20px;
+    }
+    .latest .panel-body {
+        margin: 10px 0;
+        padding: 10px 20px;
+        background-color: white;
+    }
+    .panel-default{
+        position: relative;
+    }
+    .panel-heading .toggle-info{
+        top:0;
+        cursor: pointer;
+        color: #999;
+    }
+    .panel-heading .toggle-info:hover{
+        color: lightskyblue;
+    }
+    
+/* ebd dashboard */
+
+/* start member's edit */
+    .edit{
+        width: 700px;
+        position: absolute;
+        background-color: white;
+        top:60%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        padding:20px;
+        border-radius:25px;
+        border: 3vmin solid hsl(100 100% 60%);
+        border-image-slice: 1;
+        
+        /*  leverage cascade for cross-browser gradients  */
+        border-image-source: linear-gradient(
+        hsl(100 100% 60%),
+        50%,
+        hsl(200 100% 60%)
+        );
+        border-image-source: radial-gradient(
+        hsl(100 100% 60%),
+        75%,
+        hsl(200 100% 60%)
+        );
+        border-image-source: conic-gradient( hsl(346deg 92% 49%), hsl(241deg 92% 49% / 95%), hsl(14deg 88% 44%) );
+        place-content: center;
+        box-sizing: border-box;
+    }
+    .hedit{
+        font-size: 50px;
+        font-weight: bold;
+        color: #888;
+        margin:10px 0;
+    }
+    .bedit{
+        margin-top:10px;
+        width:300px;
+        position: relative;
+        left:50%;
+        transform: translate(-50%);
+    }
+    .becom{
+        margin-top:10px;
+        width:300px;
+        position: absolute;
+        top:70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .editInput {
+        filter: drop-shadow( 0 1px 1px);
+    }
+    .form-control{
+        position: relative;
+    }
+    @media (max-width: 575.98px) { 
+        .hedit{
+        font-size: 30px;
+        margin-top:0;
+        margin-bottom: 10px;
+        }
+    }
+    @media (max-width: 767.98px) { 
+        .edit{
+            width: 500px;
+        }
+        .eitem{
+            width:500px;
+        }
+    }
+    
+/* end member's edit */
+/* start member's insert */
+.show-pass{
+    position: absolute;
+    top: 12px;
+    right: 65px;
+    color: #898993;
+}
+/* end member's insert */
+/* start member's manage */
+    h1{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .bmanage{
+        font-size: 11px;
+        margin-right:5px;
+        margin-bottom: 3px;
+    }
+    .table td{
+        padding:7px;
+    }
+/* end member's manage */
+/* start member's table */
+.table{
+    border-radius: 5px;
+    -webkit-box-shadow: 0 3px 20px #ccc;
+    -moz-box-shadow: 0 3px 20px #ccc;
+    box-shadow: 0 3px 20px #ccc;
+
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+.table th{
+    background-color: #43494E;
+    color: white;
+}
+.table td:hover{
+    border: 2px solid #0069D9;
+}
+.table thead th {
+    border-bottom: 3px solid black;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid black;
+}
+.table-dark th, .table-dark thead th {
+    border-color: #ffffff;
+}
+/* end member's table */
+/* start latest users */
+.latest{
+    margin-bottom: 0;
+    position: relative;
+}
+.latest li{
+    margin-bottom: 10px;
+    padding: 8px;
+    position: relative;
+}
+.latest li:nth-child(even){
+    background-color: #EEE;
+}
+.latest li .btn{
+    padding:8px;
+    font-size: 13px;
+    position: absolute;
+    top:1px;
+}
+.latest .right{
+    position: absolute;
+    right:20px;
+}
+.latest .right2{
+    position: absolute;
+    right:90px;
+}
+/* end latest users */
+/* start add members */
+.form-check-label{
+    margin-right:20px;
+}
+/* end add members */
+/*start category page */
+.categories{
+    border-radius: 10px;
+    box-shadow: 0 10px 18px #CCC;
+}
+.categories .cat{
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+.categories .cat h3{
+    margin: 0 0 10px;
+    color: #15a4d3;
+}
+.categories .cat p{
+    font-size: 19px;
+    margin-left: 45px;
+    color: #777;
+}
+.categories .subcats{
+    position: relative;
+}
+.categories .h-child-cats{
+    margin-left: 45px;
+    font-size: 25px;
+    color: #DC3545;
+}
+.categories .child-cats{
+    color: #0069D9;
+    font-weight: 600;
+    display: block;
+    margin-left: 65px;
+}
+
+.categories .subcats .h-btn{
+    position: absolute;
+    top:0;
+    left:-200px;
+    z-index: 9999;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.categories .subcats:hover .h-btn{
+    left:200px;
+}
+.categories .cat .h-btn a{
+    margin-right: 10px;
+    font-weight: bold;
+}
+.categories .child-cats::before{
+    content:"- ";
+}
+.hcat{
+    padding-left: 20px;
+    color: #21a321;
+}
+.hcat i{
+    font-size: 25px;
+    margin-right: 6px;
+}
+.categories .cat span{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.categories .cat span i{
+    margin-right: 5px;
+}
+.categories .cat:last-of-type ~ hr{
+    display: none;
+}
+.categories .cat .hidden-btn{
+    position: absolute;
+    top:8px;
+    right:-200px;
+    z-index: 9999;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.categories .cat:hover .hidden-btn{
+    right:20px;
+}
+.categories .cat .hidden-btn a{
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+.phead_cat .ordering span{
+    font-weight: 400;
+    font-size: 18px;
+}
+/* end category page */
+/* start items page */
+.eitem{
+    width: 700px;
+    position: absolute;
+    background-color: white;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:20px;
+    border-radius:25px;
+    border: 3vmin solid hsl(100 100% 60%);
+    border-image-slice: 1;
+    
+    /*  leverage cascade for cross-browser gradients  */
+    border-image-source: linear-gradient(
+    hsl(100 100% 60%),
+    50%,
+    hsl(200 100% 60%)
+    );
+    border-image-source: radial-gradient(
+    hsl(100 100% 60%),
+    75%,
+    hsl(200 100% 60%)
+    );
+    border-image-source: conic-gradient( hsl(346deg 92% 49%), hsl(241deg 92% 49% / 95%), hsl(14deg 88% 44%) );
+    place-content: center;
+    box-sizing: border-box;
+}
+/* end itmes page */
+
+
+
+

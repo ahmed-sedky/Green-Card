@@ -1,0 +1,538 @@
+/* start back end */
+/* start main rulez */
+body{
+    /*background-color: #e9cecc73;*/
+    background-color: #f3f1f1ba;
+}
+.asterisk {
+    position: absolute;
+    right: 33px;
+    top: 0px;
+    color: red;
+    font-size: 30px;
+}
+.important2{
+    z-index: 999999;
+}
+/* end main rulez */
+
+/*start navbar */
+
+.navbar-brand{
+    font-weight: bold;
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+}
+.nav-item{
+    font-size: 18px;
+}
+.navbar-brand span{
+    color: #2ECC71;
+}
+.profile-img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.nav-date{
+    background-color: #f3f1f1ba;
+}
+.nav-date .nav-item .nav-link{
+    color:black
+}
+/*end navbar */
+
+/*start login */
+.login{
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:20px;
+    border-radius:25px;
+    border: 3vmin solid hsl(100 100% 60%);
+    border-image-slice: 1;
+    
+    /*  leverage cascade for cross-browser gradients  */
+    border-image-source: linear-gradient(
+    hsl(100 100% 60%),
+    50%,
+    hsl(200 100% 60%)
+    );
+    border-image-source: radial-gradient(
+    hsl(100 100% 60%),
+    75%,
+    hsl(200 100% 60%)
+    );
+    border-image-source: conic-gradient( hsl(346deg 92% 49%), hsl(241deg 92% 49% / 95%), hsl(14deg 88% 44%) );
+    place-content: center;
+    box-sizing: border-box;
+}
+.login h3{
+    margin-bottom: 20px;
+}
+.login .form-control, .login .btn {
+    border-radius:10px;
+    box-shadow: 0 4px 6px #ccc;
+    /*filter: drop-shadow( 0 2px 3px black);*/
+}
+.login .form-control{
+    margin-bottom: 10px;
+}
+.login .btn{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.big-circle{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index:-1;
+    opacity: 0.6;
+    height:85%
+}
+.mid-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    height: 60%;
+    opacity: 0.6;
+    z-index: -1;
+}
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+}
+/* end login */
+/* start navbar */
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link ,.dropdown-item:hover ,.nav-link:hover{
+    background-color: #00a8ff;
+    color: white;
+    border-radius: 5px;
+}
+.dropdown-item{
+    -moz-transition: 1s all ease ;
+    -ms-transition: 1s all ease ;
+    -o-transition: 1s all ease ;
+    -webkit-transition: 1s all ease ;
+    transition: 1s all ease ;
+
+}
+.dropdown-item:hover{
+    padding-left:16px;
+}
+.dropdown-menu{    
+    border-top:4px solid #00a8ff;
+    border-radius: 5px;
+    filter: drop-shadow( 0 2px 4px  black);
+}
+/* end navbar */
+
+/* start member's insert */
+.show-pass{
+    position: absolute;
+    top: 12px;
+    right: 65px;
+    color: #898993;
+}
+/* end member's insert */
+
+/* end back end */
+
+/* start general */
+h1{
+    margin:30px 0 20px;
+    color:#444;
+}
+/* end general */
+
+/* start front end */
+/* start header */
+.container .upper-bar {
+    position: relative;
+}
+.upper-bar .right{
+    position: relative;
+    left:88%;
+}
+/* end Header */
+
+
+/* start category page */
+
+.thumbnail{
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #b2aeae;
+    border: 1px solid #ccc;
+    overflow-wrap: normal;
+}
+.item-box{
+    position: relative;
+    margin-bottom: 35px;
+    font-size: 18px;
+    max-height:650px;
+}
+.item-box .price-tag{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    background-color: #0066c0;
+    border-radius: 8px;
+    color:white;
+    padding: 5px;
+}
+.img-thumbnail{
+    margin-bottom: 20px;
+    max-height: 348px;
+}
+.thumbnail .caption p{
+    padding: 0 15px;
+    color: #0066c0;
+    -moz-transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    font-weight: bold;
+    max-height: 200px;
+}
+.thumbnail .caption p:hover{
+    color:#28a745;
+}
+.thumbnail .item-head a{
+    cursor: pointer;
+    text-decoration: none;
+    color:black;
+    -moz-transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.thumbnail .item-head a:hover{
+    color:orange;
+}
+.item-box .country-tag {
+    padding: 0 25px;
+    color: #d11212;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.item-box .approve{
+    margin: 0 25px 40px 25px;
+    padding: 10px;
+    position: absolute;
+    top:60px;
+    left:-19px;
+}
+.item-box .date-tag{
+position: absolute;
+bottom: 0;
+right:10px;
+}
+/* end category page */
+/* start Login */
+    .login input:nth-of-type(2){
+        margin-bottom: 30px;
+    }
+    .new-customer{
+        position: absolute;
+        top:75%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        font-weight:bold;
+
+    }
+    .create-account{
+        position: absolute;
+        top:80%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        font-weight:bold;
+    }
+    
+/* end login */
+/* start signup */
+.signup{
+    top:65%;
+    margin-bottom: 70px;
+}
+.signup .form-group label{
+    margin-top: -10px;
+}
+.signup .btn{
+    margin-left: 60px;
+}
+
+.the-errors{
+    position: absolute;
+    top:45%;
+    left:20%;
+    transform: translate(-50%,-50%);
+}
+/* end sugnup */
+
+/* start profile */
+.profile .information .panel{
+    border-radius:10px;
+    margin-top:25px;
+}
+.profile .information .panel-heading{
+    padding:20px;
+    color: White;
+    border-top-right-radius: 5px;    
+    border-top-left-radius: 5px; 
+}
+.profile .information .panel-priamry{
+    border: 2px solid #0a7ffc;
+}
+.profile .information .panel-warning{
+    border: 2px solid#ddcc07;
+}
+.profile .information .panel-success{
+    border: 2px solid #218838;
+}
+.profile .information .panel-priamry .panel-heading{
+    background-color: #0a7ffc;
+}
+.profile .information .panel-warning .panel-heading{
+    background-color:#ddcc07;
+}
+.profile .information .panel-success .panel-heading{
+    background-color: #218838;
+}
+.profile .information .panel-body{
+    padding:20px;
+    font-size:20px;
+    position: relative;
+}
+.pComment{
+    background-color: #e7e3e3;
+    padding:5px;
+    border-radius: 5px;
+}
+.bprofile{
+    background-color:#0066c0 ;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right:10px;
+    margin-top:60px;
+    margin-bottom: 10px;
+}
+
+/* end profile */
+
+/* start newad */
+.newad,.bnewad{
+    margin-bottom: 20px;
+}
+/*end newad */
+
+/* start item's page */
+.item-show ,.com{
+    background-color:#ffffffad;
+    border-radius:10px;
+    box-shadow: 0 4px 6px #ccc;
+    padding: 25px;
+}
+.item-compare{
+    margin-top: 100px;
+}
+.item-show .price-item{
+    position: absolute;
+    top:0;
+    right:20px;
+}
+.item-show .date-tag{
+    position: absolute;
+    bottom:0;
+    right:20px;
+}
+.item-show .member-tag{
+    position: absolute;
+    bottom:0;
+    left:20px;
+}
+.item-show .member-tag span{
+    margin-left: 20px;
+}
+.item-show .desc{
+    padding: 0 15px;
+    color: #0066c0;
+    -moz-transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    font-weight: bold;
+    font-size: 25px;
+}
+.item-show .desc:hover{
+    color:#28a745;
+}
+.item-show .country-tag{
+    padding: 0 20px;
+    color: #d11212;
+    font-weight: 600;
+}
+.item-show .country-tag span{
+    margin-left: 30px;
+}
+.add-cart{
+    background-color: #0066c0;
+    color:white;
+    position: absolute;
+    bottom:30px;
+    right:20px;
+}
+.iimage{
+    box-shadow: 0 4px 10px #ccc;
+}
+.status-tag{
+    margin-top:30px;
+}
+
+.status-tag ,.category-tag ,.tag-tag{
+    margin-bottom: 25px;
+    font-size: 19px;
+    color: #0066c0;
+    padding-left: 20px;
+}
+.status-tag span , .category-tag span ,.tag-tag span{
+    margin-left: 20px;
+}
+.btag{
+    border: 2px solid #0066c0;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+.btag:hover{
+    border: 2px solid #0066c0;
+    background-color: #0066c0;
+    color: white;
+}
+.category-tag span a{
+    color: #0066c0;
+    text-decoration: none;
+}
+.item-comment{
+    position: relative;
+}
+.item-comment textarea{
+    width:250px;
+    margin-bottom: 20px;
+}
+.bitem-comment{
+    background-color: #0066c0;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    left:0;
+}
+.bcompare{
+    background-color: #0066c0;
+    color: white;
+}
+.successMsg{
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    margin-top: 20px;
+}
+.com{
+    margin-bottom: 20px;
+}
+.com .total_comment{
+    position: relative;
+    background-color: #0066c0;
+    color: white;
+    padding: 20px 20px 40px;;
+    border-radius: 5px;
+}
+.com .total_comment:before{
+    content: "";
+    width:0;
+    height:0;
+    position: absolute;
+    top:14px;
+    left:-40px;
+    border-style: solid;
+    border-color:transparent  #0066c0 transparent transparent;
+    border-width: 20px;
+}
+.com .com-date{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    margin-bottom: 20px;
+}
+.com .com_img{
+    width:60px;
+    height:60px;
+}
+.com .com-name{
+    margin-left: 10px;
+    color: #0066c0;
+    font-weight: 600;
+}
+.cimage{
+    width:60px;
+    height:60px;
+}
+/*end item's page */
+
+
+/* end front end */
+@media (min-width: 576px) { 
+    .item-comment textarea{
+        width:250px;
+    }
+    .bitem-comment{
+        position: absolute;
+        bottom: 0px;
+        left:0;
+        margin-left: 0;
+    }
+    .com-date{
+        position: absolute;
+        bottom: 0;
+        right:10px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    .item-comment textarea{
+        width:600px;
+    }
+    .bitem-comment{
+        background-color: #0066c0;
+        color: white;
+        position: absolute;
+        bottom: 8px;
+        left:40px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    .item-comment textarea{
+        width:800px;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .item-comment textarea{
+        width:950px;
+    }
+}
+
+
