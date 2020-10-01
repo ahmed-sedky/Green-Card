@@ -11,7 +11,7 @@ $img = "layout/images/"; //images dorectory
 
 // include the important files
 include $func."functions.php";
-include $language."english.php";
+include $language."arabic.php";
 include $tbl."header.php";
 // check if there is no_navbar variable in the page
 if(!isset($no_navbar)){include $tbl."navbar.php";}

@@ -127,7 +127,7 @@ if(isset($_SESSION['user'])){
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label">Image></label>
                                     <div class="col-md-9">
-                                        <input type="file"  name="hossam" required  class="form-control-file editInput" autocomplete="off"  id="" >
+                                        <input type="file"  name="hossam"  class="form-control-file editInput" autocomplete="off"  id="" >
                                     </div>
                                 </div>
                                 <div class="form-group row">
