@@ -47,9 +47,17 @@ $(function(){
     $(".heart").click(function(){
         $(this).toggleClass("like");
         if($(this).hasClass("like")){
-            $(this).html("<i class='fas fa-heart'></i>");
+            $(this).html("<i class='fas fa-heart heart2'></i>");
         }else{
-            $(this).html("<i class='far fa-heart'></i>");
+            $(this).html("<i class='far fa-heart heart2'></i>");
+        }
+    })
+    $(".heart3").click(function(){
+        $(this).toggleClass("like");
+        if($(this).hasClass("like")){
+            $(this).html("<i class='fas fa-heart heart2'></i>");
+        }else{
+            $(this).html("<i class='far fa-heart heart2'></i>");
         }
     })
 }); 

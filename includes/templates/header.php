@@ -117,8 +117,8 @@ if (isset($_GET['lang'])){
                                 <div class="dropdown-menu important2" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="profile.php?lang=En"><?php echo lang("MYPROFILE");?></a>
                                     <a class="dropdown-item" href="newad.php?lang=En"><?php echo lang("NEWAD");?></a>
-                                    <a class="dropdown-item" href="profile.php#my_ads?lang=En"><?php echo lang("MYITEMS");?></a>
-                                    <a class="dropdown-item" href="#"><?php echo lang("WISHLIST");?></a>
+                                    <a class="dropdown-item" href="profile.php?lang=En#my_ads"><?php echo lang("MYITEMS");?></a>
+                                    <a class="dropdown-item" href="favourites.php"><?php echo lang("WISHLIST");?></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="logout.php?"><?php echo lang("LOGOUT");?> </a>
                                 </div>

@@ -64,7 +64,6 @@ if(isset($_SESSION['user'])){
                                         }
                                         echo "<div class='caption'>";
                                             //echo "<span class='user-tag text-muted'>" .$item['Member_id'] . "</span>";
-    
                                             echo "<h5  class='text-center item-head'>";
                                                 echo "<a href='items.php?itemid=". $item['Items_Id'] ."'" .">" . $item['Name'] ."</a>";
                                             echo "</h5>";

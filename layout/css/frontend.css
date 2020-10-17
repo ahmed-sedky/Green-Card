@@ -197,17 +197,48 @@ h1{
     color:white;
     padding: 5px;
 }
-.item-box .heart{
-    cursor: pointer;
+.img{
+    position: relative;
+}
+.heart{
     position: absolute;
-    top: 2%;
-    right: 2%;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    cursor: pointer;
     font-size: 25px;
     border-radius: 50%;
     color: #ff133b;
+    bottom: -21px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     -webkit-transition: all ease-in-out 1s;
     -moz-transition: all ease-in-out 1s;
-    transition:all ease-in-out 1s
+    transition: all ease-in-out 1s;
+}
+.heart2{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.heart3{
+    position: relative;
+    bottom: -45%;
+    left:-45%;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: -25px;
+    margin-bottom: -23px;
+    font-size: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff133b;
+    -webkit-transition: all ease-in-out 1s;
+    -moz-transition: all ease-in-out 1s;
+    transition: all ease-in-out 1s;
 }
 .img-thumbnail{
     margin-bottom: 20px;

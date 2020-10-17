@@ -10,7 +10,7 @@ function lang($phrase){
         'MYPROFILE'         => "my profile",
         'NEWAD'             => "New Ad",
         'MYITEMS'           => "My Items",
-        'WISHLIST'          => "Wishlist",
+        'WISHLIST'          => "Wish list",
         'LOGOUT'            => "Logout",
         //my profile links
         'MYINFO'            => "My Info",
