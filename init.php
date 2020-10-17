@@ -15,6 +15,6 @@ $img = "layout/images/"; //images dorectory
 
 // include the important files
 include $func."functions.php";
-include $language."english.php";
+include "general_lang.php";
 include $tbl."header.php";
 

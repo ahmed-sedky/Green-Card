@@ -1,7 +1,12 @@
 <?php
+/*
 $dsn ='mysql:host=sql9.freemysqlhosting.net;dbname=sql9368225';
 $user ="sql9368225";
 $password = "1PWJd36bMv";
+*/
+$dsn ='mysql:host=localhost;dbname=shop';
+$user ="root";
+$password = "";
 $options =array(
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8' 
 );

@@ -44,4 +44,12 @@ $(function(){
     $(".live-name").on("keyup",function(){
         $(".live-ad .caption h5").text($(this).val());
     });
+    $(".heart").click(function(){
+        $(this).toggleClass("like");
+        if($(this).hasClass("like")){
+            $(this).html("<i class='fas fa-heart'></i>");
+        }else{
+            $(this).html("<i class='far fa-heart'></i>");
+        }
+    })
 }); 

@@ -81,7 +81,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 ?>
 <?php
 if(isset($_SESSION['user'])){
-    echo "<h1 class='text-center'>New Advertisment</h1>";
+    echo "<h1 class='text-center'>" .lang('NEWADVERTISMENT') . "</h1>";
     ?>
     <div class="profile newad">
         <div class="information">

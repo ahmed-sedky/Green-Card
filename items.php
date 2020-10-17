@@ -31,7 +31,7 @@ if($count > 0){
     <div class="container">
         <form action="items_compare.php?itemid=<?php echo $_GET['itemid'];?>" method ='POST'>
             <div class="form-group row">
-                <label class="col-md-2 col-form-label" > Compare With Item</label>
+                <label class="col-md-2 col-form-label" > <?php echo lang("COMPAREWITHITEM");?></label>
                 <div class="col-md-3">
                     <select class="form-control" name='compare-items'>
                         <option value="0">...</option>
@@ -47,7 +47,7 @@ if($count > 0){
                         ?>
                     </select>
                 </div>
-                <input class="col-md-2 btn bcompare" type="submit" value="Compare">
+                <input class="col-md-2 btn bcompare" type="submit" value="<?php echo lang("COMPARE");?>">
             </div>
         </form>
         
@@ -63,10 +63,10 @@ if($count > 0){
                     }?>                
                 </div>
                 <div class="col-md-8">
-                        <h4>Info:</h4>
+                        <h4><?php echo lang("INFO");?>:</h4>
                         <p class='desc'><?php echo $items['Description'];?></p>
-                        <div class='country-tag '> <?php echo "Country:  ". "<span>"  . $items['Country_Made'];?></span> </div>
-                        <div class='status-tag '> <?php echo "Status: ";
+                        <div class='country-tag '> <?php echo lang("COUNTRY")  . "<span>"  . $items['Country_Made'];?></span> </div>
+                        <div class='status-tag '> <?php echo lang("STATUS");
                         if($items['Status'] == 0){
                             echo "<span> Not Mentioned </span>";
                         }elseif($items['Status'] == 1){
@@ -78,8 +78,8 @@ if($count > 0){
                             echo "<span> Old</span>";
                         }
                         ?> </div>
-                        <div class='category-tag '> <?php echo "Category: " . "<span><a href='categories.php?catid=". $items['Cat_Id'] ."&pagename="   . $items['Cat_Name'] ."'>" . $items['Cat_Name'];?></span> </div>
-                        <div class='member-tag text-muted'> <?php echo "Added By:" . "<span> <a class='text-muted' href='profile.php?id=". $items['Member_id'] ."'>"  . $items['username'];?></a></span>  </div>
+                        <div class='category-tag '> <?php echo lang("CATEGORY") . "<span><a href='categories.php?catid=". $items['Cat_Id'] ."&pagename="   . $items['Cat_Name'] ."'>" . $items['Cat_Name'];?></span> </div>
+                        <div class='member-tag text-muted'> <?php echo lang("ADDEDBY") . "<span> <a class='text-muted' href='profile.php?id=". $items['Member_id'] ."'>"  . $items['username'];?></a></span>  </div>
                         <span class='price-tag price-item btn btn-success'><?php echo "$ " . $items['Price'] ;?> </span>                       
                         <span class='date-tag text-muted'><?php echo getTime(date('Y-m-d H:i:s'), $items['Add_Date']) ; ?></span>
                         <div class="row">
@@ -104,7 +104,7 @@ if($count > 0){
                             </span>
                         </div>
                         
-                        <div class="add-cart btn"><i class="fas fa-shopping-cart"></i> Add to Cart</div>
+                        <div class="add-cart btn"><i class="fas fa-shopping-cart"></i> <?php echo lang("ADDTOCART");?></div>
                 </div>
             </div>
             <hr>
@@ -113,10 +113,10 @@ if($count > 0){
                     if (isset($_SESSION['user'])){?>
                         <div class="row">
                             <div class="offset-4">
-                                <h5>Add Your Comment</h5>
+                                <h5><?php echo lang("ADDYOURCOMMENT");?></h5>
                                 <form action="<?php $_SERVER['PHP_SELF'];?>" method="Post">
                                 <textarea class="col-md-8" required name="comment" id="" ></textarea>
-                                <input type="submit" value="Add comment" class="btn bitem-comment">
+                                <input type="submit" value="<?php echo lang('ADDCOMMENT');?>" class="btn bitem-comment">
                                 </form>
                                 <?php 
                                 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -185,7 +185,7 @@ if($count > 0){
                                     echo "<div class = 'total_comment col-sm-6 col-md-7 col-lg-8 col-xl-9'>";
                                         echo "<div >" . $comment['Comment']. "</div>";
                                         
-                                        echo "<div class='com-date col-md-4 text-muted'>" ;
+                                        echo "<div class='com-date col-md-4'>" ;
                                             echo  getTime(date('Y-m-d H:i:s'), $comment['C_date']) ;
                                         echo "</div>";
                                     echo "</div>";
@@ -194,7 +194,7 @@ if($count > 0){
                             echo "<hr>";
                             }
                     }else{
-                        echo "<span class='alert alert-info d-block'> There is No Comments On This Item To Show</span>";
+                        echo "<span class='alert alert-info d-block'>" . lang("PLACEHOLDER25"). "</span>";
                     }
         }else{
             echo "<div class='container'>";

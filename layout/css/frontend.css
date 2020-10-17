@@ -4,6 +4,15 @@ body{
     /*background-color: #e9cecc73;*/
     background-color: #f3f1f1ba;
 }
+.lang{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    background: #008BFF;
+    color: #fcfcfc;
+    border-radius: 10px;
+    margin: 0 50px;
+}
 .asterisk {
     position: absolute;
     right: 33px;
@@ -17,7 +26,9 @@ body{
 /* end main rulez */
 
 /*start navbar */
-
+.navbar2{
+    margin-top: 10px;
+}
 .navbar-brand{
     font-weight: bold;
     font-family: 'Bangers', cursive;
@@ -186,6 +197,18 @@ h1{
     color:white;
     padding: 5px;
 }
+.item-box .heart{
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 25px;
+    border-radius: 50%;
+    color: #ff133b;
+    -webkit-transition: all ease-in-out 1s;
+    -moz-transition: all ease-in-out 1s;
+    transition:all ease-in-out 1s
+}
 .img-thumbnail{
     margin-bottom: 20px;
     max-height: 348px;
@@ -331,6 +354,13 @@ right:10px;
 /*end newad */
 
 /* start item's page */
+.carousel{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.carousel-indicators li{
+    background-color: #ff133b;
+}
 .item-show ,.com{
     background-color:#ffffffad;
     border-radius:10px;
@@ -470,6 +500,7 @@ right:10px;
     bottom: 0;
     right:0;
     margin-bottom: 20px;
+    color: #3d3a36;
 }
 .com .com_img{
     width:60px;

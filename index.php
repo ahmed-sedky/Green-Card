@@ -5,6 +5,44 @@ $pageTitle ="Home Page";
 include "init.php";
     ?>
     <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="layout/images/L_1601567912_GW-MB-footwear-en.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="layout//images/L_1601916661_GW-MB-Samsung-en.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="layout//images/L_1602409609_GW-MB-Below100-en.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item ">
+                <img src="layout/images/L_1602409609_GW-MB-BestDeals-en.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="layout/images/L_1602409609_GW-MB-Bundles-en.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="layout/images/L_1602678907_GW-MB-AYHN-teaser-en.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     <div class="row">
         <?php        
     $items = getAll("*","items" , "WHERE Approve = 1" ,"Items_Id" );
@@ -17,6 +55,9 @@ include "init.php";
                     }else{
                         echo "<img class='img-thumbnail rounded'" . "src='" ."layout/images/avatar-1024x1024.jpg" ."'".">";
                     }
+                    echo "<div class='heart'>
+                    <i class='far fa-heart'></i>
+                        </div>";
                     echo "<div class='caption'>";
                         //echo "<span class='user-tag text-muted'>" .$item['Member_id'] . "</span>";
                         echo "<h5  class='text-center item-head'>";
