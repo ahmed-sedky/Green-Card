@@ -240,6 +240,48 @@ h1{
     -moz-transition: all ease-in-out 1s;
     transition: all ease-in-out 1s;
 }
+.Msg , .Msg2{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #686666a3;
+    display: none;
+}
+
+.loginMsg{
+    width: 80%;
+    padding: 15px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: White;
+    border-radius:7px;
+    /*display: none;*/
+}
+.loginMsg span{
+    color: lightblue
+}
+.Msg2 a{
+    text-decoration: none;
+}
+.Delete{
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #2274ef;
+    border-radius: 7px;
+    color: White;
+}
+.success{
+    padding:15px;
+    margin-bottom: 10px;
+}
 .img-thumbnail{
     margin-bottom: 20px;
     max-height: 348px;

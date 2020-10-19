@@ -3,9 +3,28 @@ ob_start();
 session_start();
 $pageTitle ="Favourite Page";
 include "init.php";
+$favId = isset($_GET['delete'])&&is_numeric($_GET['delete'])?intval($_GET['delete']) : 0;
+
+    if (isset($favId) && $favId !=0){
+    
+    global $db;
+    //$stmt = $db->prepare('DELETE FROM user WHERE UserId = :zuser '); //method 3 for selection
+
+    $stmt3 = $db->prepare("DELETE FROM favourites where Fav_Id = :zid");
+    $stmt3->bindParam(":zid" ,$favId );
+    $stmt3->execute();
+    if($stmt3->rowCount()>0){
+        $successMsg = "The item Has Been Deleted";
+        }
+}
     ?>
     <div class="container">
     <h2 class="text-center"><?php echo lang("WISHLIST");?></h2>
+    <?php
+    if(isset($successMsg)){
+        echo "<div class='success alert-success'>".$successMsg . "</div>";
+    }
+    ?>
     <div class="row">
         <?php      
         global $db; 
@@ -27,15 +46,18 @@ include "init.php";
             echo "<div class='col-sm-6 col-md-4 col-lg-3'>";
                 echo "<div class='thumbnail rounded item-box'>";
                     echo "<span class='price-tag '>" . "$" .$item['iPrice'] . "</span>";
-                    echo "<div class='img'>";
-                    if (! empty($item['iImage'])){
-                        echo "<img class='img-thumbnail rounded'" . "src='" ."control/Uploads/Avatar/" .$item['iImage'] ."'".">";
-                    }else{
-                        echo "<img class='img-thumbnail rounded'" . "src='" ."layout/images/avatar-1024x1024.jpg" ."'".">";
-                    }
-                    echo "<a href='#' class='heart'>
-                    <i class='fas fa-heart heart2'></i>
-                        </a>";
+                    echo "<div class='img imgWish'>";
+                        if (! empty($item['iImage'])){
+                            echo "<img class='img-thumbnail rounded'" . "src='" ."control/Uploads/Avatar/" .$item['iImage'] ."'".">";
+                        }else{
+                            echo "<img class='img-thumbnail rounded'" . "src='" ."layout/images/avatar-1024x1024.jpg" ."'".">";
+                        }
+                        echo "<div class='Msg2'>";
+                                    echo "<a href='?delete=". $item['Fav_Id'] ."' class ='Delete'> Delete </a>";
+                        echo "</div>";
+                        echo "<a href='?itemid=". $item['itemId'] ."'" . "class='heart errorMsg'>
+                        <i class='far fa-heart heart2'></i>
+                            </a>";
                     echo "</div>";
                     
                     echo "<div class='caption'>";

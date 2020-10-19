@@ -60,4 +60,18 @@ $(function(){
             $(this).html("<i class='far fa-heart heart2'></i>");
         }
     })
+    $(".errorMsg").click(function(e){
+        e.preventDefault();
+        $(".Msg").fadeIn();
+    });
+    $(".Msg").click(function(){
+        $(this).fadeOut();
+    });
+    $(".imgWish").mouseover(function(){
+        $(".Msg2").fadeIn();
+    });
+    $(".imgWish").mouseleave(function(){
+        $(".Msg2").fadeOut();
+    });
+    
 }); 

@@ -118,7 +118,7 @@ if (isset($_GET['lang'])){
                                     <a class="dropdown-item" href="profile.php?lang=En"><?php echo lang("MYPROFILE");?></a>
                                     <a class="dropdown-item" href="newad.php?lang=En"><?php echo lang("NEWAD");?></a>
                                     <a class="dropdown-item" href="profile.php?lang=En#my_ads"><?php echo lang("MYITEMS");?></a>
-                                    <a class="dropdown-item" href="favourites.php"><?php echo lang("WISHLIST");?></a>
+                                    <a class="dropdown-item" href="favourites.php?lang=En"><?php echo lang("WISHLIST");?></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="logout.php?"><?php echo lang("LOGOUT");?> </a>
                                 </div>
@@ -343,6 +343,7 @@ if (isset($_GET['lang'])){
         </nav>
         <div class="container">
                 <?php
+                echo "<a class='lang' href='?lang=Ar'>العربية</a>";
                 if(isset($_SESSION['user'])){
                     global $db;
                     $stmt5 = $db->prepare("SELECT * FROM user WHERE UserName=?");
@@ -351,15 +352,7 @@ if (isset($_GET['lang'])){
                     ?>
                     <nav class="navbar navbar-expand-lg  nav-date ">
                     <span><?php echo date("Y-m-d h:i:sa");?></span>
-                    <?php
-                        if(isset($_GET['lang'])){
-                            if($_GET['lang'] == "Ar"){
-                                echo "<a class='lang' href='?lang=En'>English</a>";
-                            }else{
-                                echo "<a class='lang' href='?lang=Ar'>العربية</a>";
-                            }
-                        }
-                    ?>
+                    
                         <button class="navbar-toggler btn-btn-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>

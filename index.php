@@ -60,14 +60,23 @@ if(isset($itemId)&&$itemId != 0){
                 echo "<div class='thumbnail rounded item-box'>";
                     echo "<span class='price-tag '>" . "$" .$item['Price'] . "</span>";
                     echo "<div class='img'>";
-                    if (! empty($item['Image'])){
-                        echo "<img class='img-thumbnail rounded'" . "src='" ."control/Uploads/Avatar/" .$item['Image'] ."'".">";
-                    }else{
-                        echo "<img class='img-thumbnail rounded'" . "src='" ."layout/images/avatar-1024x1024.jpg" ."'".">";
-                    }
-                    echo "<a href='?itemid=". $item['Items_Id'] ."'" . "class='heart'>
-                    <i class='far fa-heart heart2'></i>
-                        </a>";
+                        if (! empty($item['Image'])){
+                            echo "<img class='img-thumbnail rounded'" . "src='" ."control/Uploads/Avatar/" .$item['Image'] ."'".">";
+                        }else{
+                            echo "<img class='img-thumbnail rounded'" . "src='" ."layout/images/avatar-1024x1024.jpg" ."'".">";
+                        }
+                        if (! isset($_SESSION['user'])){
+                            echo "<div class='Msg'>";
+                                echo "<div class ='loginMsg'> You Must Login First Before You Can Add This Item to Wish List<span> click on The Msg To Hide It</span></div>";
+                            echo "</div>";
+                            echo "<a href='?itemid=". $item['Items_Id'] ."'" . "class='heart errorMsg'>
+                            <i class='far fa-heart heart2'></i>
+                                </a>";
+                        }else{
+                            echo "<a href='?itemid=". $item['Items_Id'] ."'" . "class='heart'>
+                            <i class='far fa-heart heart2'></i>
+                                </a>";
+                        }
                     echo "</div>";
                     
                     echo "<div class='caption'>";

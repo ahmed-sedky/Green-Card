@@ -3,19 +3,32 @@ ob_start();
 session_start();
 include "init.php";
 $itemId = isset($_GET['itemid']) && is_numeric($_GET['itemid'])?intval($_GET['itemid']):0;
-if(isset($itemId)&&$itemId != 0){
-    global $db;
-    $stmt = $db->prepare("INSERT INTO favourites(Registeration_Date , Item_Id ,Member_id) VALUES(now() ,:zitem ,:zmem  )");
-    $stmt->execute(array(
-        'zitem' =>$itemId ,
-        'zmem'  => $_SESSION['uid']
-    ));
+global $db;
+$stmt5 =$db->prepare("SELECT * FROM favourites where Item_Id =? ");
+$stmt5->execute(array($itemId));
+if($stmt5->rowCount() > 0){
+    $errorRepeat = "This Item Has Already Been in Wish Lish";
+}else{
+    if(isset($itemId)&&$itemId != 0){
+        global $db;
+        $stmt = $db->prepare("INSERT INTO favourites(Registeration_Date , Item_Id ,Member_id) VALUES(now() ,:zitem ,:zmem  )");
+        $stmt->execute(array(
+            'zitem' =>$itemId ,
+            'zmem'  => $_SESSION['uid']
+        ));
+    }
 }
+
 ?>
 <div class="container">
     <?php
     if(isset($_GET['pagename'])){?>
         <h1 class='text-center'><?php echo str_replace("-", " ",$_GET['pagename']); ?></h1>
+        <?php
+        if(isset($errorRepeat)){
+            echo "<div class='success alert-info'>".$errorRepeat . "</div>";
+        }
+        ?>
         <div class="row">
             <?php      
             if (isset($_GET['catid'])){
@@ -30,7 +43,7 @@ if(isset($itemId)&&$itemId != 0){
                     }else{
                         echo "<img class='img-thumbnail rounded'" . "src='" ."layout/images/avatar-1024x1024.jpg" ."'".">";
                     }
-                    echo "<a href='#'class='heart'>
+                    echo "<a href='?itemid=". $item['Items_Id'] ."&pagename=" .$_GET['pagename'] ."&catid=" .$_GET['catid'] ."'class='heart'>
                     <i class='far fa-heart heart2'></i>
                         </a>";
                     echo "</div>";
