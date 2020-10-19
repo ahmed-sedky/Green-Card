@@ -4,16 +4,28 @@ session_start();
 $pageTitle ="Home Page";
 include "init.php";
 $itemId = isset($_GET['itemid']) && is_numeric($_GET['itemid'])?intval($_GET['itemid']):0;
-if(isset($itemId)&&$itemId != 0){
-    global $db;
-    $stmt = $db->prepare("INSERT INTO favourites(Registeration_Date , Item_Id ,Member_id) VALUES(now() ,:zitem ,:zmem  )");
-    $stmt->execute(array(
-        'zitem' =>$itemId ,
-        'zmem'  => $_SESSION['uid']
-    ));
+global $db;
+$stmt5 =$db->prepare("SELECT * FROM favourites where Item_Id =? ");
+$stmt5->execute(array($itemId));
+if($stmt5->rowCount() > 0){
+    $errorRepeat = "This Item Has Already Been in Wish Lish";
+}else{
+    if(isset($itemId)&&$itemId != 0){
+        global $db;
+        $stmt = $db->prepare("INSERT INTO favourites(Registeration_Date , Item_Id ,Member_id) VALUES(now() ,:zitem ,:zmem  )");
+        $stmt->execute(array(
+            'zitem' =>$itemId ,
+            'zmem'  => $_SESSION['uid']
+        ));
+    }
 }
     ?>
     <div class="container">
+        <?php
+        if(isset($errorRepeat)){
+            echo "<div class='success alert-info'>".$errorRepeat . "</div>";
+        }
+        ?>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
